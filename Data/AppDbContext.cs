@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
     {
         optionsBuilder.UseSqlite("Data Source=Banco.sqlite");
         base.OnConfiguring(optionsBuilder);
+    
             
         }
     }
