@@ -1,6 +1,6 @@
 
 
-using desafiocs.Clientes;
+using Desafios.Domain.Rotas;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,6 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
 app.AddRotasClientes();
 app.UseHttpsRedirection();
 
