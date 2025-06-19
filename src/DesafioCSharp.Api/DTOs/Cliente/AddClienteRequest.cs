@@ -1,4 +1,4 @@
-namespace MeuApp.DTOs.Cliente;
+namespace dtos;
 
 public class AddClienteRequest
 {

@@ -49,9 +49,6 @@ public class ClienteEndereco
                 return true;
             }
         }
-    
-
-
 
         return false;
     }

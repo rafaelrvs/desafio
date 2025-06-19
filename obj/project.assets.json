@@ -3319,11 +3319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj",
+      "projectUniqueName": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\DesafioCSharp.sln\\desafiocs.csproj",
       "projectName": "desafiocs",
-      "projectPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj",
+      "projectPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\DesafioCSharp.sln\\desafiocs.csproj",
       "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\obj\\",
+      "outputPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\DesafioCSharp.sln\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

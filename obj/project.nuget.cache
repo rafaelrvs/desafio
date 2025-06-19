@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9xgSW1n2qek=",
+  "dgSpecHash": "/RhQzLHdLp0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\DesafioCSharp.sln\\desafiocs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

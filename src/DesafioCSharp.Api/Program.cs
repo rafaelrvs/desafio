@@ -1,7 +1,8 @@
 
 
 using System.Text.Json.Serialization;
-using Desafios.Domain.Rotas;
+using Usecase.EndpointExtensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
