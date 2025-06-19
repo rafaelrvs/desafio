@@ -1,7 +1,7 @@
 
 namespace desafiocs
 {
-    public class UpdateUseCase
+    public class AtualizarUseCase
     {
         public async Task<IResult> AtualizarAsync<TEntity, TDto>(
             AppDbContext context,

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Usecase.EndpointExtensions
 {
-    public static class ConsultaClienteUseCase
+    public static class ConsultaUseCase
     {
       
         public static RouteHandlerBuilder MapGetById<TEntity, TDto>(

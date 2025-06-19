@@ -1,72 +1,40 @@
 
-namespace Usecase.EndpointExtensions;
-
 using desafiocs;
 using desafiocs.Domain.Cliente;
+using Desafios.Application.Exceptions;
 using Desafios.Domain.Cliente;
 using Microsoft.EntityFrameworkCore;
+
+namespace Usecase.EndpointExtensions;
 public static class ClienteRotas
 {
 
 
     public static void AddRotasClientes(this WebApplication app)
     {
-        app.MapPost("registrar", async (AddClienteRequest request, AppDbContext context) =>
-        {
-
-            var textoJaExiste = await context.Cliente
-       .AnyAsync(c => c.Contato != null && c.Contato.Texto == request.Texto);
-            if (textoJaExiste)
-            {
-                return Results.Conflict(new
-                {
-                    Mensagem = $"Já existe um cliente com o texto de contato '{request.Texto}'."
-                });
-            }
-
-            var novoCliente = new Cliente(request.Nome)
-            {
-                Endereco = new ClienteEndereco(),
-                Contato = new ClienteContato
-                {
-                    Tipo = request.Tipo,
-                    Texto = request.Texto
-                }
-            };
-
-            var endereco = novoCliente.Endereco!;
-            await endereco.BuscarEnderecoPorCepAsync(request.Cep);
-            endereco.Numero = request.Numero;
-            endereco.Complemento = request.Complemento;
-
-
-            await context.Cliente.AddAsync(novoCliente);
-            await context.SaveChangesAsync();
-
-
-            var criadoDto = new ClienteDto 
-            {
-                Id = novoCliente.Id,
-                Nome = novoCliente.Nome,
-                DataCadastro = novoCliente.DataCadastro,
-                Endereco = new EnderecoDto
-                {
-                    Logradouro = endereco.Logradouro,
-                    Cidade = endereco.Cidade,
-                    Cep = endereco.Cep,
-                    Numero = endereco.Numero,
-                    Complemento = endereco.Complemento
-                },
-                Contato = new ContatoDto
-                {
-                    Id = novoCliente.Id,
-                    Tipo = novoCliente.Contato!.Tipo,
-                    Texto = novoCliente.Contato.Texto
-                }
-            };
-
-            return Results.Created($"/consulta/{novoCliente.Id}", criadoDto);
-        });
+      app.MapPost("registrar", async (
+    AddClienteRequest       request,
+    ICreateClienteUseCase   createUseCase
+) =>
+{
+    try
+    {
+        var dto = await createUseCase.ExecuteAsync(request);
+        return Results.Created($"/consulta/{dto.Id}", dto);
+    }
+    catch (DuplicateContatoException ex)
+    {
+       
+        return Results.Conflict(new { Mensagem = ex.Message });
+    }
+    catch (Exception ex)
+    {
+ 
+        return Results.Problem(
+            detail: $"Ocorreu um erro ao criar o cliente: {ex.Message}"
+        );
+    }
+});
 
         app.MapList<Cliente, ClienteDto >(
      "consulta",
@@ -136,7 +104,7 @@ public static class ClienteRotas
     AppDbContext ctx
 ) =>
 {
-    var useCase = new UpdateUseCase();
+    var useCase = new AtualizarUseCase();
 
     return await useCase.AtualizarAsync<Cliente, ClienteDto >(
         ctx,

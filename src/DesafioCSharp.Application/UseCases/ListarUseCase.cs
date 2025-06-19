@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Usecase.EndpointExtensions
 {
-    public static class ListarClienteUseCase
+    public static class ListarUseCase
     {
         public static RouteHandlerBuilder MapList<TEntity, TDto>(
             this IEndpointRouteBuilder endpoints,

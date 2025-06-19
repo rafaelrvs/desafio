@@ -1,7 +1,7 @@
 
 namespace desafiocs
 {
-    public static class RegisterClienteUseCase
+    public static class RegisterUseCase
     {
         public static RouteHandlerBuilder MapCreate<TEntity, TRequest, TDto>(
             this IEndpointRouteBuilder app,

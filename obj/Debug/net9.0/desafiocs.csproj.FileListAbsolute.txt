@@ -622,3 +622,6 @@ C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\obj\Debug\net9.0\refint
 C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\obj\Debug\net9.0\desafiocs.pdb
 C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\obj\Debug\net9.0\desafiocs.genruntimeconfig.cache
 C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\obj\Debug\net9.0\ref\desafiocs.dll
+C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\rafae\Desktop\muralis\desafio\DesafioCSharp.sln\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
