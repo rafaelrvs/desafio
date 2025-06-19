@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("desafiocs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b22fa0acb3322138f27d603e7e16466ffa3d9b90")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+492690a9c47558823d21e5ee926727e871aee956")]
 [assembly: System.Reflection.AssemblyProductAttribute("desafiocs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("desafiocs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,1 @@
+public record AlteraClienteRequest(string id, string Cep,string Numero, string Complemento, string Tipo,string Texto);

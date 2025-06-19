@@ -42,6 +42,7 @@ public class ClienteEndereco
 
             if (dadosCep is not null && !string.IsNullOrEmpty(dadosCep.Cep))
             {
+                Cep = cep;
                 Logradouro = dadosCep.Logradouro;
                 Complemento = dadosCep.Complemento;
                 Cidade = dadosCep.Localidade;
