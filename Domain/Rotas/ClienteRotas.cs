@@ -3,27 +3,44 @@ namespace Desafios.Domain.Rotas;
 
 using desafiocs.Domain.Cliente;
 using Desafios.Domain.Cliente;
-
+using Microsoft.EntityFrameworkCore;
 public static class ClienteRotas
 {
 
 
     public static void AddRotasClientes(this WebApplication app)
     {
-        app.MapGet("consulta", () =>  new Cliente("rafael"));
+        app.MapGet("consulta", async (AppDbContext context) =>
+                   {
+                       var lista = await context.Cliente
+                           .Include(c => c.Endereco)
+                           .Include(c => c.Contato)
+                           .ToListAsync();
 
+                       return Results.Ok(lista);
+                   });
 
-        app.MapPost("registrar", async (AddClienteRequest request,AppDbContext context)=>
+        app.MapPost("registrar", async (AddClienteRequest request, AppDbContext context) =>
         {
-            var novoCliente = new Cliente(request.Nome);
-            var endereco = new ClienteEndereco();
+            var novoCliente = new Cliente(request.Nome)
+            {
+                Endereco = new ClienteEndereco(),
+                Contato = new ClienteContato
+                {
+                    Tipo = request.Tipo,
+                    Texto = request.Texto
+                }
+            };
 
-             await endereco.BuscarEnderecoPorCepAsync(request.Cep);
-            Console.WriteLine(endereco.Logradouro);
+            var endereco = novoCliente.Endereco!;
+            await endereco.BuscarEnderecoPorCepAsync(request.Cep);
+            endereco.Numero = request.Numero;
+            endereco.Complemento = request.Complemento;
 
-            // await context.Cliente.AddAsync(novoCliente);
-        
-            // await context.SaveChangesAsync();
-        } );
- }   
+
+            await context.Cliente.AddAsync(novoCliente);
+            await context.SaveChangesAsync();
+            return "Cadastro realizado com sucesso";
+        });
+    }
 }

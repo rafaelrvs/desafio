@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\T.I\\Desktop\\clones\\desafio\\desafiocs.csproj": {}
+    "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\T.I\\Desktop\\clones\\desafio\\desafiocs.csproj": {
+    "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T.I\\Desktop\\clones\\desafio\\desafiocs.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj",
         "projectName": "desafiocs",
-        "projectPath": "C:\\Users\\T.I\\Desktop\\clones\\desafio\\desafiocs.csproj",
-        "packagesPath": "C:\\Users\\T.I\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T.I\\Desktop\\clones\\desafio\\obj\\",
+        "projectPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\desafiocs.csproj",
+        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rafae\\Desktop\\muralis\\desafio\\desafio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\T.I\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
