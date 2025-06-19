@@ -44,7 +44,7 @@ public static class ClienteRotas
             await context.SaveChangesAsync();
 
 
-            var criadoDto = new dbClienteDto
+            var criadoDto = new ClienteDto 
             {
                 Id = novoCliente.Id,
                 Nome = novoCliente.Nome,
@@ -68,13 +68,13 @@ public static class ClienteRotas
             return Results.Created($"/consulta/{novoCliente.Id}", criadoDto);
         });
 
-        app.MapList<Cliente, dbClienteDto>(
+        app.MapList<Cliente, ClienteDto >(
      "consulta",
 
      Cliente => Cliente
          .Include(c => c.Endereco)
          .Include(c => c.Contato)
-         .Select(c => new dbClienteDto
+         .Select(c => new ClienteDto 
          {
              Id = c.Id,
              Nome = c.Nome,
@@ -101,13 +101,13 @@ public static class ClienteRotas
  );
 
 
-        app.MapGetById<Cliente, dbClienteDto>(
+        app.MapGetById<Cliente, ClienteDto >(
                    "consulta/{id:int}",
                    (cliente, id) => cliente
                        .Include(c => c.Endereco)
                        .Include(c => c.Contato)
                        .Where(c => c.Id == id)
-                       .Select(c => new dbClienteDto
+                       .Select(c => new ClienteDto 
                        {
                            Id = c.Id,
                            Nome = c.Nome,
@@ -138,7 +138,7 @@ public static class ClienteRotas
 {
     var useCase = new UpdateUseCase();
 
-    return await useCase.AtualizarAsync<Cliente, dbClienteDto>(
+    return await useCase.AtualizarAsync<Cliente, ClienteDto >(
         ctx,
         id,
 
@@ -170,7 +170,7 @@ public static class ClienteRotas
         },
 
 
-        cliente => new dbClienteDto
+        cliente => new ClienteDto 
         {
             Id = cliente.Id,
             Nome = cliente.Nome,

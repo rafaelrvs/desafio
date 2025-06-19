@@ -1,5 +1,5 @@
 namespace desafiocs;
-public class dbClienteDto
+public class ClienteDto 
 {
     public int Id { get; init; }
     public string Nome { get; init; } = "";
