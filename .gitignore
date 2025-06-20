@@ -1,0 +1,23 @@
+# Pastas de build do .NET
+/bin/
+/obj/
+
+# Arquivos de configuração locais
+appsettings.Development.json
+
+# Banco de dados local
+Banco.sqlite
+
+# Arquivos do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Pasta de build de publicações (caso use)
+publish/
+
+# Outros
+*.db
+*.sqlite
+*.log
