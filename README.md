@@ -151,7 +151,7 @@ classDiagram
    dotnet run
    ```
 7. **Acessar documentação Swagger:**\
-   Navegue até `https://localhost:5210/swagger`
+   Navegue até `http://localhost:5210/swagger`
 
 ---
 
@@ -229,6 +229,12 @@ http://localhost:5210/deletar/1
 ![Deletar Cliente](./src/DesafioCSharp.Api/assets/Deletar.png)
 
 ---
+
+#OBS:
+Como fiz pelo vscode pode ser que clonando diretamente o repositorio de erro, pode ou importa a pasta ou abrir o Visual Studio pela pasta.
+
+
+![Pasta](./src/DesafioCSharp.Api/assets/erro.png)
 ## 📬 Contato
 
 Dúvidas ou sugestões? Entre em contato  via [linkedin](linkedin\:https://www.linkedin.com/in/rafaelrvs/).
