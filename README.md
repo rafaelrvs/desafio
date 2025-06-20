@@ -231,7 +231,7 @@ http://localhost:5210/deletar/1
 ---
 
 #OBS:
-Como fiz pelo vscode pode ser que clonando diretamente o repositorio de erro, pode ou importa a pasta ou abrir o Visual Studio pela pasta.
+Como fiz pelo vscode, pode ser que clonando diretamente o repositorio, de erro pode fazer o clone normalmente  ou importa a pasta ou abrir o Visual Studio pela pasta.
 
 
 ![Pasta](./src/DesafioCSharp.Api/assets/erro.png)
